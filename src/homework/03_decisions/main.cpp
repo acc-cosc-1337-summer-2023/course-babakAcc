@@ -11,13 +11,10 @@ int main()
 	cin>>numerical_grade;
 
 	char letter_grade = get_letter_grade_using_switch(numerical_grade);
-	cout<<"Letter grade is: "<<letter_grade<<"\n";
+	cout<<"Letter grade using switch: "<<letter_grade<<"\n";
 
-
-	string dna = "AGCTATAG";
-	double g_c_content = get_gc_content(dna);
-
-	cout<<"GC-content: " <<g_c_content<<"%"<<"\n";
+	char letter_grade_if = get_letter_grade_uisng_if(numerical_grade);
+	cout<<"Letter grade using if-else if: "<<letter_grade_if<<"\n";
 
 	return 0;
 }

@@ -33,17 +33,22 @@ char get_letter_grade_using_switch(int grade)
 }
 
 
-double get_gc_content(const std::string& dnaString) {
-    int count_CG = 0;
-    int total_Symbols = 0;
+char get_letter_grade_uisng_if(int grade)
+{
+    char letter_grade;
 
-    for (char symbol : dnaString) {
-        if (symbol == 'C' || symbol == 'G') {
-            count_CG++;
-        }
-        total_Symbols++;
+    if (grade >= 90) {
+        letter_grade = 'A';
+    } else if (grade >= 80) {
+        letter_grade = 'B';
+    } else if (grade >= 70) {
+        letter_grade = 'C';
+    } else if (grade >= 60) {
+        letter_grade = 'D';
+    } else {
+        letter_grade = 'F';
     }
-
-    double gc_Content = static_cast<double>(count_CG) / total_Symbols * 100.0;
-    return gc_Content;
+    
+    return letter_grade;
 }
+
