@@ -11,6 +11,7 @@ int main()
 	TicTacToe game;
 	std::string first_player;
 	char user_choice = 'y';
+	
 
 	do
 	{	
@@ -27,10 +28,20 @@ int main()
 			cin>>position;
 			game.mark_board(position);
 			game.display_board();
+			std::string winner = game.get_winner();
+			if (winner == "C")
+			{
+			cout<<"It's a tie!"<<"\n";
+			}
+			else
+			{
+			cout<<"Player"<<winner<<" wins!"<<"\n";
+			}
 		}
 
 		cout<<"Play again? y or n ";
 		cin>>user_choice;
+
 
 	}while(user_choice == 'y' || user_choice == 'Y');
 
